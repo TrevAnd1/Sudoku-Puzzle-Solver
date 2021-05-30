@@ -1,6 +1,6 @@
 import pygame
 pygame.init()
 
-screen = True
+screen = False
 
 pygame.quit()
