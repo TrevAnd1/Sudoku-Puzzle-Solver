@@ -26,21 +26,21 @@ WHITE = (0,0,0)
 SCREEN_WIDTH = 1000
 SCREEN_HEIGHT = 1000
 
-board = [
-    [0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0],
-]
-
 # TODO : get user input to see how many numbers they want to start with given on the board and use that number in line 54 in a 'for' loop to interate through 'board' as many times as the user wants in their input
 
-class Board():
+class Board:
+
+    board = [
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+    ]
 
     def __init__(self):
         pass
@@ -51,7 +51,7 @@ class Board():
     def initializeBoard(self): # set 0's in board to random numbers between one and 10 so that they can be solved
         rand_row = random.randint(0,8)
         rand_col = random.randint(0,8)
-        board[rand_row][rand_col] = random.randint(1,9) # TODO : check if the spot that it randomly chooses already has a number in it (if board[rand_row][rand_col] != 0)
+        self.board[rand_row][rand_col] = random.randint(1,9) # TODO : check if the spot that it randomly chooses already has a number in it (if board[rand_row][rand_col] != 0)
 
 pygame.init()
 
